@@ -1,0 +1,50 @@
+
+st{
+use                             linux-box
+host_name                       {{ hostvars[item].ansible_fqdn }}
+alias                           {{ hostvars[item].ansible_fqdn }}
+address                         {{ hostvars[item].ansible_default_ipv4.address }}
+hostgroups                      linux-servers
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     CPU Load
+check_command           check_nrpe!check_load
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     Total Processes
+check_command           check_nrpe!check_total_procs
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     Current Users
+check_command           check_nrpe!check_users
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     Current swap
+check_command           check_nrpe!check_swap
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     Current disk
+check_command           check_nrpe!check_disk
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     Check uptime
+check_command           check_uptime
+}
+define service{
+use                     generic-service
+host_name               {{ hostvars[item].ansible_fqdn }}
+service_description     Boot partition
+check_command           check_boot
+}
