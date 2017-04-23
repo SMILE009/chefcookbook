@@ -1,6 +1,6 @@
 Chef cookbooks for SS IT Academy 23.04.2017
 
-NRPE - test cookboks for install NRPE with config to my Nagios Server
+NRPE - test cookboks for install NRPE with config to my Nagios Server /n
 nagios-server-config - add node to nagios server after install nrpe
 NTP - Install ntpd & change time zone to Europe/Kiev
 
