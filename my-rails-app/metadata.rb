@@ -1,6 +1,6 @@
 name 'my-rails-app'
-maintainer 'Denys Baranov'
-maintainer_email 'dhotcolorado@gmail.com'
+maintainer 'SSA Studeent'
+maintainer_email 'lv-229@ssa.lviv.ua'
 license 'All Rights Reserved'
 description 'Installs/Configures my-rails-app'
 long_description 'Installs/Configures my-rails-app'
